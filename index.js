@@ -41,25 +41,25 @@ function processInput() {
         const [name, price, stock] = process.argv.slice(3);
         const parsedPrice = parseFloat(price);
         const parsedStock = parseInt(stock);
-        result = productsAPI.createBakeryItem(name, parsedPrice, parsedStock);
+        result = productsAPI.createStoreItem(name, parsedPrice, parsedStock);
     } else if (expectedCommand === "list") {
-        result = productsAPI.listBakeryItems();
+        result = productsAPI.listStoreItems();
     } else if (expectedCommand === "view") {
         const index = parseInt(process.argv[3]);
-        result = productsAPI.getBakeryItemDetails(index);
+        result = productsAPI.getStoreItemDetails(index);
     } else if (expectedCommand === "delete") {
         const index = parseInt(process.argv[3]);
-        result = productsAPI.deleteBakeryItem(index);
+        result = productsAPI.deleteStoreItem(index);
     } else if (expectedCommand === "update") {
         const index = parseInt(process.argv[3]);
         const [name, price, stock] = process.argv.slice(4);
         const parsedPrice = parseFloat(price);
         const parsedStock = parseInt(stock);
-        result = productsAPI.updateBakeryItem(index, name, parsedPrice, parsedStock);
+        result = productsAPI.updateStoreItem(index, name, parsedPrice, parsedStock);
     } else if (expectedCommand === "generate") {
-        const bakedItems = generateBakedGoods();
-        fs.writeFileSync(dataFilePath, JSON.stringify(bakedItems, null, 2));
-        result = "Random items generated and saved to bakery.json";
+        const storeItems = generateProducts();
+        fs.writeFileSync(dataFilePath, JSON.stringify(storeItems, null, 2));
+        result = "Random items generated and saved to products.json";
     } else if (expectedCommand === "addToCart") {
         productsAPI.addToCart();
         result = "Item added to the cart.";
@@ -78,3 +78,5 @@ function processInput() {
 }
 
 processInput();
+
+generateProducts();
