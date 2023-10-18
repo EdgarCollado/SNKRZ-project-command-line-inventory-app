@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { nanoid } = require("nanoid");
+const { faker } = require("@faker-js/faker");
 const path = require("path");
 const dataFilePath = path.join(__dirname, "../data/products.json");
 const cartFilePath = path.join(__dirname, "../data/shoppingCart.json");
@@ -68,10 +69,11 @@ function saveStoreItemsToFile() {
 
 loadStoreItems();
 
-function createStoreItem(name, priceInCents, inStock) {
+function createStoreItem(name, inStock) {
     const id = nanoid(4);
+    const priceInCents = Number(faker.commerce.price(100, 300, 0))
     const newStoreItem = { id, name, priceInCents, inStock };
-    bakeryItems.push(newStoreItem);
+    storeItems.push(newStoreItem);
     saveStoreItemsToFile();
     return storeItems;
 }

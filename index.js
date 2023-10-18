@@ -3,6 +3,7 @@ const { faker } = require("@faker-js/faker");
 const fs = require("fs");
 const dataFolder = "data";
 const dataFilePath = `${dataFolder}/shoppingCart.json`;
+// const cartFilePath = `${dataFolder}/shoppingCart.json`;
 
 function generateProducts() {
     const brandsCarried = [
@@ -38,10 +39,9 @@ function processInput() {
     let result = "Error: Command not found";
 
     if (expectedCommand === "create") {
-        const [name, price, stock] = process.argv.slice(3);
-        const parsedPrice = parseFloat(price);
+        const [name, stock] = process.argv.slice(3);
         const parsedStock = parseInt(stock);
-        result = productsAPI.createStoreItem(name, parsedPrice, parsedStock);
+        result = productsAPI.createStoreItem(name, parsedStock);
     } else if (expectedCommand === "list") {
         result = productsAPI.listStoreItems();
     } else if (expectedCommand === "view") {
@@ -78,5 +78,3 @@ function processInput() {
 }
 
 processInput();
-
-generateProducts();
