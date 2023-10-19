@@ -70,5 +70,17 @@
     "name": "newbalance",
     "priceInCents": 298,
     "inStock": 5
+  },
+  {
+    "id": "sO1p",
+    "name": "vans",
+    "priceInCents": 266,
+    "inStock": null
+  },
+  {
+    "id": "s9Di",
+    "name": "vans",
+    "priceInCents": 200,
+    "inStock": 1
   }
 ]
