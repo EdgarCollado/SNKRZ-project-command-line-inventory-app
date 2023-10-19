@@ -34,12 +34,12 @@ function addToCart() {
     saveCartItemsToFile(cartItems);
 }
 
-function viewCart() {
-    const cartItems = loadCartItems();
-    for (let item of cartItems) {
-        console.log(`Product: ${item.product}, Quantity: ${item.quantity}, Price: ${item.price}`);
-    }
-}
+// function viewCart() {
+//     const cartItems = loadCartItems();
+//     for (let item of cartItems) {
+//         console.log(`Product: ${item.product}, Quantity: ${item.quantity}, Price: ${item.price}`);
+//     }
+// }
 
 
 function loadStoreItems() {
