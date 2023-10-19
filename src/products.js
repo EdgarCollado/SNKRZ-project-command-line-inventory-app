@@ -32,13 +32,10 @@ function addToCart(cart, item) {
         throw new Error("Item must be an object.");
     }
 
-    // Make a copy of the cart to avoid modifying the original
     const updatedCart = [...cart];
 
-    // Add the item to the updated cart
     updatedCart.push(item);
 
-    // Save the updated cart items to a file
     saveCartItemsToFile(updatedCart);
 
     return updatedCart;
