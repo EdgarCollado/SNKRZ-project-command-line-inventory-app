@@ -71,8 +71,8 @@ loadStoreItems();
 
 function createStoreItem(name, inStock) {
     const id = nanoid(4);
-    const priceInCents = Number(faker.commerce.price(100, 300, 0))
-    const newStoreItem = { id, name, priceInCents, inStock };
+    const retailPrice = Number(faker.commerce.price(100, 300, 0));
+    const newStoreItem = { id, name, retailPrice, inStock };
     storeItems.push(newStoreItem);
     saveStoreItemsToFile();
     return storeItems;

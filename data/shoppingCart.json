@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "id": "ofnjv7bb",
+    "brandName": "nike",
+    "sneakerName": "West",
+    "size": "7",
+    "priceInCents": "300",
+    "inStock": false
+  },
+  {
+    "id": "t7c8s0uw",
+    "brandName": "salomon",
+    "sneakerName": "worse",
+    "size": "5",
+    "priceInCents": "148",
+    "inStock": true
+  },
+  {
+    "id": "rfh30kil",
+    "brandName": "new balance",
+    "sneakerName": "Taya",
+    "size": "1",
+    "priceInCents": "222",
+    "inStock": false
+  },
+  {
+    "id": "ph4gnk3o",
+    "brandName": "asics",
+    "sneakerName": "invoice",
+    "size": "5",
+    "priceInCents": "271",
+    "inStock": false
+  },
+  {
+    "id": "efrdlpjp",
+    "brandName": "converse",
+    "sneakerName": "copy",
+    "size": "1",
+    "priceInCents": "220",
+    "inStock": false
+  },
+  {
+    "id": "9l0ojmw8",
+    "brandName": "jordan",
+    "sneakerName": "Shoes",
+    "size": "5",
+    "priceInCents": "263",
+    "inStock": true
+  },
+  {
+    "id": "j6mttbmg",
+    "brandName": "hoka",
+    "sneakerName": "monetize",
+    "size": "9",
+    "priceInCents": "265",
+    "inStock": false
+  },
+  {
+    "id": "oop8v4ey",
+    "brandName": "vans",
+    "sneakerName": "Games",
+    "size": "6",
+    "priceInCents": "115",
+    "inStock": false
+  },
+  {
+    "id": "g53goa5u",
+    "brandName": "uggs",
+    "sneakerName": "Castle",
+    "size": "2",
+    "priceInCents": "278",
+    "inStock": true
+  },
+  {
+    "id": "eckykzhk",
+    "brandName": "dr martens",
+    "sneakerName": "East",
+    "size": "5",
+    "priceInCents": "216",
+    "inStock": false
+  }
+]

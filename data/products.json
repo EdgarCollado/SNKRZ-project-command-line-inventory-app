@@ -82,5 +82,41 @@
     "name": "vans",
     "priceInCents": 200,
     "inStock": 1
+  },
+  {
+    "id": "r8Y2",
+    "name": "jordan",
+    "priceInCents": 269,
+    "inStock": 2
+  },
+  {
+    "id": "VlyD",
+    "name": "jordan",
+    "itemPrice": 117,
+    "inStock": 2
+  },
+  {
+    "id": "0FPf",
+    "name": "jordan",
+    "retailPrice": 142,
+    "inStock": 2
+  },
+  {
+    "id": "JJVe",
+    "name": "air",
+    "retailPrice": 173,
+    "inStock": null
+  },
+  {
+    "id": "x1xR",
+    "name": "airjordanonehighog",
+    "retailPrice": 142,
+    "inStock": 2
+  },
+  {
+    "id": "1xle",
+    "name": "air-jordan",
+    "retailPrice": 278,
+    "inStock": 2
   }
 ]
