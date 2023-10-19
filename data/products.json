@@ -118,5 +118,11 @@
     "name": "air-jordan",
     "retailPrice": 278,
     "inStock": 2
+  },
+  {
+    "id": "Z1eg",
+    "name": "air-jordan",
+    "retailPrice": 209,
+    "inStock": 1
   }
 ]

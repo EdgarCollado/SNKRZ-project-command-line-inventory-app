@@ -23,15 +23,33 @@ function saveCartItemsToFile(cartItems) {
 
 loadCart()
 
-function addToCart() {
-    const cartItems = loadCartItems();
-    for (let item of storeItems) {
-        if (item.inStock) {
-            cartItems.push(item)
-        }
+function addToCart(cart, item) {
+    if (!Array.isArray(cart)) {
+        throw new Error("Cart must be an array.");
     }
 
-    saveCartItemsToFile(cartItems);
+    if (typeof item !== "object") {
+        throw new Error("Item must be an object.");
+    }
+
+    // Make a copy of the cart to avoid modifying the original
+    const updatedCart = [...cart];
+
+    // Add the item to the updated cart
+    updatedCart.push(item);
+
+    // Save the updated cart items to a file
+    saveCartItemsToFile(updatedCart);
+
+    return updatedCart;
+    // const cartItems = loadCartItems();
+    // for (let item of storeItems) {
+    //     if (item.inStock) {
+    //         cartItems.push(item)
+    //     }
+    // }
+
+    // saveCartItemsToFile(cartItems);
 }
 
 // function viewCart() {

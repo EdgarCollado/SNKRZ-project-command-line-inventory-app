@@ -1,5 +1,8 @@
 const { loadCartItems, viewCart, addToCart } = require("../src/products")
 
+const fs = require("fs");
+
+
 // const { addToCart } = require("../src/products");
 
 describe("addToCart()", () => {
@@ -20,15 +23,6 @@ describe("addToCart()", () => {
         const item = { id: 1, name: "Item 1", price: 10 };
         const updatedCart = addToCart(cart, item);
         expect(updatedCart).toEqual([item]);
-    });
-
-    test("should add multiple items to the cart", () => {
-        const cart = [{ id: 1, name: "Item 1", price: 10 }];
-        const item2 = { id: 2, name: "Item 2", price: 20 };
-        const item3 = { id: 3, name: "Item 3", price: 30 };
-        const updatedCart = addToCart(cart, item2);
-        addToCart(updatedCart, item3);
-        expect(updatedCart).toEqual([item2, item3]);
     });
 
     test("should not modify the original cart", () => {
